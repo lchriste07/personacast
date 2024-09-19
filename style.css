@@ -1,0 +1,90 @@
+body {
+  background-color: #272935;
+}
+
+/* adjust things for phones */
+@media screen and (min-width: 300px) and (max-width: 1000px) {
+  .welcome .card {
+    width: 21rem;
+    height: 21rem;
+  }
+  
+  .services img {
+    max-width: 5rem;
+    max-height: 5rem;
+  }
+}
+
+/* make icons for streaming services larges on bigger devices */
+.services img {
+  height: 15rem; 
+  width: 15rem;
+  
+}
+
+/* customzie bootstrap background to have different color and have opacity  */
+.bg-primary {
+  --bs-body-bg-rgb: 64, 46, 122;
+  --bs-bg-opacity: 1.0;
+  background-color: rgba(var(--bs-body-bg-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.welcome {
+  height: 32rem;
+  background-image: url(https://cdn.glitch.global/8645755e-9086-4de4-8385-f969bbfe9f55/nosignal.webp?v=1723079274168);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* card expands slightly when hovered  */
+.result {
+  background-color: #272935;
+  transition: transform .2s;
+}
+
+.card-img-top {
+  height: 12rem;
+}
+
+.result:hover {
+  background-color: #32333D;
+  transform: scale(1.10);
+}
+
+/* slight blur to the show image when hovering the card  */
+.result:hover img {
+  filter: blur(1px);
+  opacity: 10%;
+}
+
+/* content of more-info class initially hidden  */
+.more-info {
+  position: absolute; 
+  visibility: hidden;
+}
+
+/* 
+  hide content in idle class and show content in more-info class
+  when hovering over the card
+*/
+.card:hover > .idle > .card-body {
+  visibility: hidden;
+}
+
+.card:hover > .idle + .more-info {
+  visibility: visible;
+}
+
+/* button hover animation  */
+.btn.btn-primary {
+  background-color: #00ADB5;
+  border-color: #00ADB5;
+  transition: transform .2s;
+}
+
+.btn.btn-primary:hover {
+  color: #00ADB5;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  transform: scale(1.10);
+}
